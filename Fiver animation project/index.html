@@ -1,0 +1,20 @@
+<!DOCTYPE html>  <html>    <head>      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />      <meta http-equiv="Content-Security-Policy"          content="default-src *; img-src *; media-src *; script-src * localhost; style-src * localhost;style-src-elem * localhost;">      <META HTTP-EQUIV="Pragma" CONTENT="no-cache">      <base href="$!URL_PAYMENT_PAGE">      <META HTTP-EQUIV="Expires" CONTENT="-1">      
+    <title>Processing ...</title>      
+    <script type="text/javascript" src="https://cdn.paragon.online/scripts/progressForm.js?v=1.96"></script>      <link href="style.css" rel="stylesheet" />  </head>    
+    <body>      <div class="container">   
+         
+         <h1>Payment is processing...</h1>        
+           <h2>This may take up to several minutes, please do not close this page or use the back button</h2>       
+              <div class="loader"><img width="60%"  src="Client-Transparent-BG.gif">    </div>     
+                   <form name="checkform" method="post">         
+                            <input type="hidden" id="refresh-rate" name="refresh-rate" value="$!WAIT" />          
+                                <input type="hidden" id="serial" name="serial" value="$!SERIAL" />           
+                                   <input type="hidden" id="endpointid" name="endpointid" value="$!ENDPOINTID" />         
+                                        <div class="hidden-fields">$!HIDDEN_FIELDS</div>             
+                                         <input type="hidden" id="client-session-id" name="client-session-id" value="$!SESSION_ID" />                
+                                             <input type="hidden" id="continue_to_payment" name="continue_to_payment" value="$!CONTINUE_TO_PAYMENT" />    
+                                                <input type="hidden" name="tmp" value="$!uuid" />         
+                                             </form>    
+                                              </div>
+                                              </body>   
+                                               </html>
